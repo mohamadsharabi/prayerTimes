@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer Times</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Prayer Times</h1>
+
+  <select id="cities">
+    <option value="city=Cairo&country=Egypt">Cairo</option>
+    <option value="city=Alexandria&country=Egypt">Alexandria</option>
+    <option value="city=Giza&country=Egypt">Giza</option>
+    <option value="city=Shubra El Kheima&country=Egypt">Shubra El Kheima</option>
+    <option value="city=Port Said&country=Egypt">Port Said</option>
+    <option value="city=Suez&country=Egypt">Suez</option>
+    <option value="city=Mansoura&country=Egypt">Mansoura</option>
+    <option value="city=Luxor&country=Egypt">Luxor</option>
+    <option value="city=Ismailia&country=Egypt">Ismailia</option>
+    <option value="city=Aswan&country=Egypt">Aswan</option>
+    <option value="city=Asyut&country=Egypt">Asyut</option>
+    <option value="city=Faiyum&country=Egypt">Faiyum</option>
+    <option value="city=Zagazig&country=Egypt">Zagazig</option>
+    <option value="city=Damietta&country=Egypt">Damietta</option>
+    <option value="city=Minya&country=Egypt">Minya</option>
+    <option value="city=Qena&country=Egypt">Qena</option>
+    <option value="city=Sohag&country=Egypt">Sohag</option>
+    <option value="city=Hurghada&country=Egypt">Hurghada</option>
+    <option value="city=Sharm El Sheikh&country=Egypt">Sharm El Sheikh</option>
+    <option value="city=6th of October City&country=Egypt">6th of October City</option>
+    <option value="city=New Cairo&country=Egypt">New Cairo</option>
+    <option value="city=Tanta&country=Egypt">Tanta</option>
+    <option value="city=Beni Suef&country=Egypt">Beni Suef</option>
+    <option value="city=Qalyubia&country=Egypt">Qalyubia</option>
+    <option value="city=Kafr El Sheikh&country=Egypt">Kafr El Sheikh</option>
+    <option value="city=Marsa Matruh&country=Egypt">Marsa Matruh</option>
+    <option value="city=Arish&country=Egypt">Arish</option>
+    <option value="city=Benha&country=Egypt">Benha</option>
+    <option value="city=Helwan&country=Egypt">Helwan</option>
+    <option value="city=10th of Ramadan City&country=Egypt">10th of Ramadan City</option>
+    <option value="city=Qena&country=Egypt">Qena</option>
+    <option value="city=Mallawi&country=Egypt">Mallawi</option>
+    <option value="city=Bilbais&country=Egypt">Bilbais</option>
+    <option value="city=El-Mahalla El-Kubra&country=Egypt">El-Mahalla El-Kubra</option>
+    <option value="city=Desouk&country=Egypt">Desouk</option>
+    <option value="city=Mit Ghamr&country=Egypt">Mit Ghamr</option>
+    <option value="city=Al Khankah&country=Egypt">Al Khankah</option>
+    <option value="city=Kafr el-Dawwar&country=Egypt">Kafr el-Dawwar</option>
+    <option value="city=Rosetta&country=Egypt">Rosetta</option>
+    <option value="city=Minuf&country=Egypt">Minuf</option>
+    <option value="city=Zefta&country=Egypt">Zefta</option>
+    <option value="city=Qena&country=Egypt">Qena</option>
+    <option value="city=Sheikh Zayed City&country=Egypt">Sheikh Zayed City</option>
+    <option value="city=Abu Kabir&country=Egypt">Abu Kabir</option>
+    <option value="city=Kafr Saad&country=Egypt">Kafr Saad</option>
+    <option value="city=Shebin El Kom&country=Egypt">Shebin El Kom</option>
+    <option value="city=Sinbellawein&country=Egypt">Sinbellawein</option>
+    <option value="city=Hihya&country=Egypt">Hihya</option>
+    <option value="city=Shibin El Qanater&country=Egypt">Shibin El Qanater</option>
+    <option value="city=Sharqia&country=Egypt">Sharqia</option>
+    <option value="city=Belqas&country=Egypt">Belqas</option>
+    <option value="city=Abu Hammad&country=Egypt">Abu Hammad</option>
+    <option value="city=Abu Suwir&country=Egypt">Abu Suwir</option>
+    <option value="city=Abu Sultan&country=Egypt">Abu Sultan</option>
+    <option value="city=Abu Tig&country=Egypt">Abu Tig</option>
+    <option value="city=El Quseir&country=Egypt">El Quseir</option>
+    <option value="city=Asyut&country=Egypt">Asyut</option>
+    <option value="city=El Hamool&country=Egypt">El Hamool</option>
+    <option value="city=Itay el Barud&country=Egypt">Itay el Barud</option>
+    <option value="city=El Obour City&country=Egypt">El Obour City</option>
+    <option value="city=Sadat City&country=Egypt">Sadat City</option>
+    <option value="city=Beheira&country=Egypt">Beheira</option>
+  </select>
+
+  <div id="date-container">
+    <div id="date">Date</div>
+  </div>
+
+  <div id="hijri-date-container">
+    <div id="hijri-date">Hijri Date</div>
+    <div id="hijri-month-ar-en">Hijri Month</div>
+  </div>
+
+  <div id="prayers-container">
+    <div class="prayer-container" id="fajr-container">
+      <div class="prayer-label">Fajr</div>
+      <div id="fajr-time" class="prayer-time">Time</div>
+    </div>
+    <div class="prayer-container" id="dhuhr-container">
+      <div class="prayer-label">Dhuhr</div>
+      <div id="dhuhr-time" class="prayer-time">Time</div>
+    </div>
+    <div class="prayer-container" id="asr-container">
+      <div class="prayer-label">Asr</div>
+      <div id="asr-time" class="prayer-time">Time</div>
+    </div>
+    <div class="prayer-container" id="maghrib-container">
+      <div class="prayer-label">Maghrib</div>
+      <div id="maghrib-time" class="prayer-time">Time</div>
+    </div>
+    <div class="prayer-container" id="isha-container">
+      <div class="prayer-label">Isha</div>
+      <div id="isha-time" class="prayer-time">Time</div>
+    </div>
+  </div>
+
+  <script src="./node_modules/axios/dist/axios.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

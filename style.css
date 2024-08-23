@@ -1,0 +1,156 @@
+/* Base styles remain the same as previously provided */
+
+:root {
+    --background-color: #121212;
+    --card-background: #1E1E1E;
+    --primary-color: #BB86FC;
+    --secondary-color: #03DAC6;
+    --text-color: #E0E0E0;
+    --highlight-color: #3700B3;
+    --border-color: #333;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+#cities-container {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+#cities {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: var(--card-background);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#cities:focus {
+    border-color: var(--primary-color);
+}
+
+#date-container, #hijri-date-container {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1.2em;
+    transition: transform 0.5s ease;
+}
+
+#prayers-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 700px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.8s ease both;
+}
+
+.prayer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: var(--highlight-color);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.prayer-container:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.prayer-label {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+.prayer-time {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.prayer-container {
+    animation: fadeIn 0.8s ease both;
+}
+
+.prayer-container.slide-out {
+    animation: slideOutLeft 0.5s ease forwards;
+}
+
+.prayer-container.slide-in {
+    animation: slideInRight 0.5s ease forwards;
+}
+
